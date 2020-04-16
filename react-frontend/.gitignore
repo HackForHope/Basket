@@ -29,3 +29,5 @@ old-examples/
 ../flask-backend/static/react/
 
 */*/.DS_Store
+
+package-lock.json

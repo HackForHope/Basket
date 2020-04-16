@@ -1,7 +1,6 @@
 Pipfile
 flask-backend/static/react/*
-flask-backend/static/react/css/*
-flask-backend/static/react/js/*
-*/package-lock.json
+flask-backend/static/templates/*
+react-frontend/package-lock.json
 .DS_Store
 */.DS_Store
