@@ -1,1 +1,4 @@
 Pipfile
+flask-backend/static/react/*
+flask-backend/static/templates/*
+react-frontend/package-lock.json
