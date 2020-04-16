@@ -17,8 +17,6 @@ const Page = styled.div`
   position: absolute;
   top: 60px;
   padding: 0 auto;
-  overflow: hidden;
-  flex-direction: row;
 `
 
 function App() {
