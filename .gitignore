@@ -1,1 +1,4 @@
 Pipfile
+flask-backend/static/react/*
+flask-backend/static/react/css/*
+flask-backend/static/react/js/*
