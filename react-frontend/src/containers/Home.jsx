@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import Entry from '../components/Entry'
+import {Link} from 'react-router-dom'
 
 const Container = styled.div`
     width: 100%;
@@ -28,8 +29,7 @@ const Toggles = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding-top: 1rem;
-    background: red;
+    padding: 1rem 0;
 `
 
 const List = styled.div`
@@ -39,17 +39,39 @@ const List = styled.div`
     scroll-behavior: smooth;
 `
 
-const Button = styled.div`
+const PostRequestButton = styled(Link)`
     height: 100px;
-    width: 100%;
-    background: blue;
+    margin-top: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: white;
 `
 
 const Toggle = styled.div`
-    width: 50%;
+    width: 100%;
     height: 100%;
     background: ${props => props.checked ? "green" : "white"};
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     border: solid black 0.5rem;
+`
+
+const RegisterButton = styled.div`
+    margin-top: 1rem;
+    height: 100px;
+    background: ${props => props.checked ? "green" : "white"};
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 `
 
 const reqDummyData = [
@@ -128,17 +150,26 @@ export default class Home extends Component{
     constructor(props){
         super(props)
         this.state = {
-            isRequest: true
+            isRequest: true,
+            registeredHelper: false // actually need to look at account info first
         }
+        this.handleToggle = this.handleToggle.bind(this)
     }
 
+    handleToggle(isRequest){
+        if (isRequest != this.state.isRequest){
+            this.setState({
+                isRequest: isRequest
+            })
+        }
+    }
     render(){   
         return(
             <Container>
                 <LeftCol>
                     <Toggles>
-                        <Toggle checked = {this.state.isRequest} onClick = {() => this.setState({isRequest: true})}>Requests</Toggle>
-                        <Toggle checked = {!this.state.isRequest} onClick = {() => this.setState({isRequest: false})}>Helpers</Toggle>
+                        <Toggle checked = {this.state.isRequest} onClick = {() => this.handleToggle(true)}>Requests</Toggle>
+                        <Toggle checked = {!this.state.isRequest} onClick = {() => this.handleToggle(false)}>Helpers</Toggle>
                     </Toggles>
                     <List>{this.state.isRequest ? reqDummyData.map((dummy) => {
                                                 return (<Entry title = {dummy.tag1}
@@ -151,7 +182,13 @@ export default class Home extends Component{
                                                                text2 = {dummy.tag3}>
                                                         </Entry>)})}
                     </List>
-                    <Button></Button>
+                    {this.state.isRequest ? (<PostRequestButton to='/shop'>Post a request</PostRequestButton>) : 
+                                            (<RegisterButton
+                                                onClick = {() => this.setState({registeredHelper: !this.state.registeredHelper})} 
+                                                checked = {this.state.registeredHelper}>
+                                                    {this.state.registeredHelper ? "I'm not available anymore" :
+                                                                                "Register as helper!"}
+                                            </RegisterButton>)}
                 </LeftCol>
                 <RightCol>
                     {/* the map goes here */}
@@ -161,3 +198,4 @@ export default class Home extends Component{
     }
 }
 
+// {this.state.isRequest ? () : 

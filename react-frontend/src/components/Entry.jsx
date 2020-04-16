@@ -6,7 +6,9 @@ const Title = styled.h2`
 
 const Container = styled.div`
     margin: 0.5rem 0;
-    height: 10rem;
+    padding: 1rem 2rem;
+    background: white;
+    height: 7rem;
     border: solid black 0.5rem;
 `
 
