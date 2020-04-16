@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import MainPage from "./GoogleMapReact";
+// import MyTable from "./FixedTable";
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <div style={{width: '90%', height: '800px'}}>
+    <MainPage />
+  </div>,
   document.getElementById('root')
 );
 

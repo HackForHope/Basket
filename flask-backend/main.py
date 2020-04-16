@@ -8,4 +8,3 @@ def my_index(path):
     return flask.render_template("index.html", token="Hello Flask + React")
 
 app.run(debug=True)
-

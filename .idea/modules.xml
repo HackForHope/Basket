@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Basket.iml" filepath="$PROJECT_DIR$/.idea/Basket.iml" />
+      <module fileurl="file://$USER_HOME$/learnyoureact/.idea/learnyoureact.iml" filepath="$USER_HOME$/learnyoureact/.idea/learnyoureact.iml" />
     </modules>
   </component>
 </project>
