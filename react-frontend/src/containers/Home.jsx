@@ -159,7 +159,7 @@ export default class Home extends Component{
             activeID: -1,
         }
         this.handleToggle = this.handleToggle.bind(this);
-        this.handleMouseEnter = this.handleMouseEnter.bind(this);
+        // this.handleMouseEnter = this.handleMouseEnter.bind(this);
         this.handleOnClick = this.handleOnClick.bind(this);
 
     }
@@ -173,14 +173,14 @@ export default class Home extends Component{
 
     }
 /*TODO Notworking yet */
-    handleMouseEnter(orderHovered){
-        this.setState({activeID: orderHovered});
-        console.log("here");
-    }
+    // handleMouseEnter(orderHovered){
+    //     this.setState({activeID: orderHovered});
+    //     console.log("here");
+    // }
 
-    handleMouseLeave(orderHovered){
-        // console.log("Haha" + {orderHovered.id});
-    }
+    // handleMouseLeave(orderHovered){
+    //     console.log("Haha" + {orderHovered.id});
+    // }
 
     handleOnClick(orderHovered){
         console.log(orderHovered.id);
@@ -197,10 +197,14 @@ export default class Home extends Component{
                     <List>{this.state.isRequest ? orderData.businesses.map((order) => {
                         //onMouseEnter={(order) => this.handleMouseEnter(order)} onMouseLevae={()=> this.handleMouseLeave(order)}
                                                 return (
-                                                        <Entry onClick={this.handleOnClick(order)}id={order.id} title = {order.name}
+                                                    <div onClick={() => this.handleOnClick(order)}>
+                                                        <Entry id={order.id} title = {order.name}
                                                                 text1 = {order.rating}
                                                                 text2 = {order.location.display_address}>
-                                                        </Entry>)}): 
+                                                        </Entry>
+                                                    </div>
+                                                    )
+                                                }): 
                                             helperDummyData.map((dummy) => {
                                                 return (<Entry title = {dummy.tag1}
                                                                text1 = {dummy.tag2}
