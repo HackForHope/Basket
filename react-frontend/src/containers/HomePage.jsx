@@ -11,12 +11,11 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
 `
-
 const LeftCol = styled.div`
-    width: 35vw;
+    width: 30vw;
     height: 100%;
     padding: 1.5rem;
-    background: lightGray;
+    background: #61D4B3;
     display: flex;
     flex-direction: column;
 `
@@ -51,30 +50,43 @@ const PostRequestButton = styled(Link)`
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    background: white;
+    background: #FDD465;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
 `
 
 const Toggle = styled.div`
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
     width: 100%;
     height: 100%;
-    background: ${props => props.checked ? "green" : "white"};
+    background: ${props => props.checked ? "#FFD31D" : "#FFFFEE"
+};
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: solid black 0.5rem;
+    border: #E5E5E5 0.1rem;
+    border-radius: 5px;
 `
 
 const RegisterButton = styled.div`
     margin-top: 1rem;
     height: 100px;
-    background: ${props => props.checked ? "green" : "white"};
+    background: ${props => props.checked ? "#FFD31D" : "#FFFFEE"};
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
 `
 
 const reqDummyData = [
