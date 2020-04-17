@@ -60,7 +60,7 @@ export default class CompleteMap extends Component{
   render(){ 
   const WrappedMap = withScriptjs(withGoogleMap(Map));
   return (
-      <div style={{width: '60vw', height: '100vh'}}>
+      <div style={{width: '65vw', height: '100vh'}}>
           <WrappedMap googleMapURL = {`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,palces&key=AIzaSyAXPrmkjAfz6u3Asz_X4JivUsOhQ56y2_8`} 
           loadingElement = {<div style={{ height: "100%"}}/>}
           containerElement = {<div style={{ height: "100%"}}/>}

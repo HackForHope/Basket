@@ -5,9 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 // import MainPage from "./components/GoogleMapReact";
 ReactDOM.render(
-  <div style={{width: '90%', height: '800px'}}>
-    <App />
-  </div>,
+    <App />,
   document.getElementById('root')
 );
 

@@ -24,7 +24,7 @@ const LeftCol = styled.div`
 const RightCol = styled.div`
     height: 100%;
     background: lightBlue;
-    width: 100%;
+    width: 65vw;
 `
 
 const Toggles = styled.div`
