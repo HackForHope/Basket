@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import Entry from '../components/Entry'
+import CompleteMap from '../components/GoogleMapReact'
 import {Link} from 'react-router-dom'
+import * as orderData from "../data/order.json";
 
 const Container = styled.div`
     width: 100%;
@@ -146,14 +148,19 @@ const helperDummyData = [
     }
 ]
 
+const businesses = orderData.businesses;
 export default class Home extends Component{
     constructor(props){
         super(props)
         this.state = {
             isRequest: true,
-            registeredHelper: false // actually need to look at account info first
+            registeredHelper: false,// actually need to look at account info first
+            activeID: -1,
         }
-        this.handleToggle = this.handleToggle.bind(this)
+        this.handleToggle = this.handleToggle.bind(this);
+        this.handleMouseEnter = this.handleMouseEnter.bind(this);
+        this.handleOnClick = this.handleOnClick.bind(this);
+
     }
 
     handleToggle(isRequest){
@@ -162,8 +169,23 @@ export default class Home extends Component{
                 isRequest: isRequest
             })
         }
+
     }
-    render(){   
+/*TODO Notworking yet */
+    handleMouseEnter(orderHovered){
+        this.setState({activeID: orderHovered});
+        console.log("here");
+    }
+
+    handleMouseLeave(orderHovered){
+        // console.log("Haha" + {orderHovered.id});
+    }
+
+    handleOnClick(orderHovered){
+        console.log(orderHovered.id);
+    }
+    
+    render(){
         return(
             <Container>
                 <LeftCol>
@@ -171,11 +193,13 @@ export default class Home extends Component{
                         <Toggle checked = {this.state.isRequest} onClick = {() => this.handleToggle(true)}>Requests</Toggle>
                         <Toggle checked = {!this.state.isRequest} onClick = {() => this.handleToggle(false)}>Helpers</Toggle>
                     </Toggles>
-                    <List>{this.state.isRequest ? reqDummyData.map((dummy) => {
-                                                return (<Entry title = {dummy.tag1}
-                                                            text1 = {dummy.tag2}
-                                                            text2 = {dummy.tag3}>
-                                                        </Entry>)}) : 
+                    <List>{this.state.isRequest ? orderData.businesses.map((order) => {
+                        //onMouseEnter={(order) => this.handleMouseEnter(order)} onMouseLevae={()=> this.handleMouseLeave(order)}
+                                                return (
+                                                        <Entry onClick={this.handleOnClick(order)}id={order.id} title = {order.name}
+                                                                text1 = {order.rating}
+                                                                text2 = {order.location.display_address}>
+                                                        </Entry>)}): 
                                             helperDummyData.map((dummy) => {
                                                 return (<Entry title = {dummy.tag1}
                                                                text1 = {dummy.tag2}
@@ -191,7 +215,7 @@ export default class Home extends Component{
                                             </RegisterButton>)}
                 </LeftCol>
                 <RightCol>
-                    {/* the map goes here */}
+                    <CompleteMap />
                 </RightCol>
             </Container>
         )
