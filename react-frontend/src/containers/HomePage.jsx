@@ -15,8 +15,8 @@ const Container = styled.div`
 const LeftCol = styled.div`
     width: 35vw;
     height: 100%;
-    padding: 1.5rem;
-    background: lightGray;
+    padding: 0rem;
+    background: #61D4B3;
     display: flex;
     flex-direction: column;
 `
@@ -28,11 +28,11 @@ const RightCol = styled.div`
 `
 
 const Toggles = styled.div`
-    height: 80px;
+    height: 70px;
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 1rem 0;
+    padding: 0 rem 0;
 `
 
 const List = styled.div`
