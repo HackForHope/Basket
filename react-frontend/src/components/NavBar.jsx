@@ -76,11 +76,18 @@ export default class NavBar extends Component{
         }
 
         this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this)
+        this.onClickSidebar = this.onClickSidebar.bind(this)
     }
 
     onSetSidebarOpen(){
         this.setState({
             sidebarOpen: !this.state.sidebarOpen
+        })
+    }
+
+    onClickSidebar() {
+        this.setState({
+            sidebarOpen: false
         })
     }
 
@@ -92,9 +99,9 @@ export default class NavBar extends Component{
                 <Sidebar
                     sidebar = {<b><SpaceAboveMenu />
                                   <Menu>
-                                    <MenuButton to = '/profile/account'>Account Information</MenuButton>
-                                    <MenuButton to = '/profile/requests'>My Requests</MenuButton>
-                                    <MenuButton to = '/profile/missions'>My Missions</MenuButton>
+                                    <MenuButton onClick = {() => this.onClickSidebar() } to = '/profile/account'>Account Information</MenuButton>
+                                    <MenuButton onClick = {() => this.onClickSidebar() } to = '/profile/requests'>My Requests</MenuButton>
+                                    <MenuButton onClick = {() => this.onClickSidebar() } to = '/profile/missions'>My Missions</MenuButton>
                                   </Menu></b>}
                     open={this.state.sidebarOpen}
                     onSetOpen={this.onSetSidebarOpen}
