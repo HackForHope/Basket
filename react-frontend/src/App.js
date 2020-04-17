@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -23,6 +23,16 @@ const Page = styled.div`
   padding: 0 auto;
 `
 function App() {
+  const [movies, setMovies] = useState([]); 
+  useEffect(() => {
+    fetch("/movies").then(response =>
+      response.json().then(data => {
+        console.log(data);
+        setMovies(data.movies);
+      })
+    );
+  }, []);
+
   return (
     <Router>
       <NavBar />

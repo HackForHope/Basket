@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import './SignUpPage.css';
  
@@ -19,8 +19,14 @@ const Container = styled.div`
   background-size: cover;
 `
 
-export default class SignUpPage extends Component{
-  render() {
+export default function SignUpPage(){
+    // const [movies, setMovies] = useState([]);
+    // useEffect(() => {
+    //   fetch('/movies').json().then(data => {
+    //     setMovies(data);
+    //     console.log("data")
+    //   });
+    // }, []);
     return (
       <Container>
         <link rel="stylesheet" type="text/css" href="SignUpPage.css" />
@@ -43,5 +49,5 @@ export default class SignUpPage extends Component{
         </div>
       </Container>
     );
-  }
+  
 }
