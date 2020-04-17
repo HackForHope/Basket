@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+*:focus {
+  outline: none;
+}
+
+#login-box {
+  position: relative;
+  margin: 5% auto;
+  width: 60rem;
+  height: 45rem;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 80px 45px;
+  width: 25rem;
+  height: 45rem;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 40px;
+  font-family: Monserrat;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 4px;
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+  font-family: Monserrat;
+  font-weight: 400;
+  font-size: 20px;
+  transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid #16a085;
+  color: #16a085;
+  transition: 0.2s ease;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  width: 200px;
+  height: 60px;
+  background: #FEDA0F;
+  border: none;
+  border-radius: 2px;
+  color: #000000;
+  font-family: Monserrat;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: 0.1s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  opacity: 0.8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+input[type="submit"]:active {
+  opacity: 1;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.1s ease;
+}
+
+.or {
+  position: absolute;
+  top: 20rem;
+  left: 27.5rem;
+  width: 80px;
+  height: 80px;
+  background: #FEDA0F;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  line-height: 80px;
+  text-align: center;
+  font-family: Monserrat;
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 45px 80px;
+  width: 30rem;
+  height: 45rem;
+  background: url('https://i.ibb.co/JqB4BK6/2.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 0 2px 2px 0;
+}
+
+.right .loginwith {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFF;
+  font-family: Monserrat;
+  text-align: right;
+}
+
+button.social-signin {
+  margin-bottom: 30px;
+  width: 300px;
+  height: 80px;
+  border: none;
+  border-radius: 2px;
+  color: #FFF;
+  font-family: Monserrat;
+  font-weight: 500;
+  font-size: 20px;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+button.social-signin:hover,
+button.social-signin:focus {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+button.social-signin.facebook {
+  background: #32508E;
+}
+
+button.social-signin.twitter {
+  background: #55ACEE;
+}
+
+button.social-signin.google {
+  background: #DD4B39;
+}

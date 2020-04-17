@@ -11,11 +11,10 @@ const Container = styled.div`
     display: flex;
     flex-direction: row;
 `
-
 const LeftCol = styled.div`
-    width: 35vw;
+    width: 30vw;
     height: 100%;
-    padding: 0rem;
+    padding: 1.5rem;
     background: #61D4B3;
     display: flex;
     flex-direction: column;
@@ -43,7 +42,7 @@ const List = styled.div`
 `
 
 const PostRequestButton = styled(Link)`
-    height: 100px;
+    height: 300px;
     margin-top: 1rem;
     text-align: center;
     display: flex;
@@ -51,30 +50,42 @@ const PostRequestButton = styled(Link)`
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    background: white;
+    background: #FDD465;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-size: 20px;
 `
 
 const Toggle = styled.div`
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
     width: 100%;
     height: 100%;
-    background: ${props => props.checked ? "green" : "white"};
+    background: ${props => props.checked ? "#FFD31D" : "#FFFFEE"};
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: solid black 0.5rem;
+    border: #E5E5E5 0.1rem;
+    border-radius: 5px;
 `
 
 const RegisterButton = styled.div`
+    height: 120px;
     margin-top: 1rem;
-    height: 100px;
-    background: ${props => props.checked ? "green" : "white"};
     text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-size: 20px;
+    background: ${props => props.checked ? "#FFD31D" : "#FFFFEE"};
 `
 
 const reqDummyData = [
@@ -211,7 +222,7 @@ export default class HomePage extends Component{
                                                                text2 = {dummy.tag3}>
                                                         </Entry>)})}
                     </List>
-                    {this.state.isRequest ? (<PostRequestButton to='/shop'>Post a request</PostRequestButton>) : 
+                    {this.state.isRequest ? (<PostRequestButton to = '/shop'>Post a request</PostRequestButton>) : 
                                             (<RegisterButton
                                                 onClick = {() => this.setState({registeredHelper: !this.state.registeredHelper})} 
                                                 checked = {this.state.registeredHelper}>
