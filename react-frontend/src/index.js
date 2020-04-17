@@ -7,7 +7,7 @@ import MainPage from "./GoogleMapReact";
 // import MyTable from "./FixedTable";
 ReactDOM.render(
   <div style={{width: '90%', height: '800px'}}>
-    <MainPage />
+    <App />
   </div>,
   document.getElementById('root')
 );
