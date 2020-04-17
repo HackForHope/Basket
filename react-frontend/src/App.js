@@ -27,7 +27,10 @@ function App() {
           <Route exact path = "/" render = {() => (<Redirect from='/' to='/home' />)} />
           <Route exact path = "/home" component = {Home} />
           <Route exact path = "/shop" component = {Shop} />
-          <Route exact path = "/profile" component = {Profile} />
+          <Route exact path = "/profile" render = {() => (<Redirect from='/profile' to='/profile/account'></Redirect>)} />
+          <Route path = "/profile/account" render = {() => (<Profile page = "account" />)} />
+          <Route path = "/profile/requests" render = {() => (<Profile page = "requests" />)} />
+          <Route path = "/profile/missions" render = {() => (<Profile page = "missions" />)} />
         </Switch>
       </Page>
     </Router>
