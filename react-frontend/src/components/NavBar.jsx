@@ -28,6 +28,7 @@ const Icon = styled(Link)`
     background: white;
     border: solid black 0.2rem;
     text-decoration: none;
+    z-index: 5;
 `
 
 const ProfileIcon = styled(Icon)`
@@ -65,7 +66,7 @@ const MenuButton = styled(Link)`
     background: white;
     border: solid black 0.2rem;
     text-decoration: none;
-    z-index: 5;
+    z-index: 10;
 
     &:hover {
         background: lightGray;
@@ -99,7 +100,7 @@ export default class NavBar extends Component{
         return (
             <Container>
                 <Header />
-                <HomeIcon to = '/home' />
+                <HomeIcon to = '/home'></HomeIcon>
                 <Sidebar
                     sidebar = {<b><SpaceAboveMenu />
                                   <Menu>
