@@ -17,6 +17,7 @@ const Header = styled.div`
     height: 60px;
     width: 100%;
     background: yellow;
+    z-index: 5;
 `
 
 const Icon = styled(Link)`
