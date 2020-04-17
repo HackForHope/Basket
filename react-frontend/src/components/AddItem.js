@@ -13,15 +13,15 @@ const AddItem = () => {
         setPrice(e.target.value);
     };
 
-    const addMovie = e => {
+    const addItem = e => {
         e.preventDefault();
         setItems(prevItems => [...prevItems, { name: name, price: price, id: prevItems.length }])
     };
 
     return (
         <div>
-            <h2>Add Item: (name|price) </h2>
-            <form onSubmit={addMovie}>
+            <p>Add Item: (name|price) </p>
+            <form onSubmit={addItem}>
                 <input type="text" name="name" value={name} onChange={updateName} />
                 <input type="number" name="price" value={price} onChange={updatePrice} />
                 <button>Submit</button>
