@@ -6,9 +6,11 @@ import {
   Redirect
 } from "react-router-dom";
 import NavBar from './components/NavBar'
-import Home from './containers/Home'
-import Shop from './containers/Shop'
-import Profile from './containers/Profile'
+import HomePage from './containers/HomePage'
+import ShopPage from './containers/ShopPage'
+import AccountPage from './containers/AccountPage'
+import RequestsPage from './containers/RequestsPage'
+import MissionsPage from './containers/MissionsPage'
 import styled from 'styled-components'
 
 const Page = styled.div`
@@ -25,12 +27,12 @@ function App() {
       <Page>
         <Switch>
           <Route exact path = "/" render = {() => (<Redirect from='/' to='/home' />)} />
-          <Route exact path = "/home" component = {Home} />
-          <Route exact path = "/shop" component = {Shop} />
+          <Route exact path = "/home" component = {HomePage} />
+          <Route exact path = "/shop" component = {ShopPage} />
           <Route exact path = "/profile" render = {() => (<Redirect from='/profile' to='/profile/account'></Redirect>)} />
-          <Route path = "/profile/account" render = {() => (<Profile page = "account" />)} />
-          <Route path = "/profile/requests" render = {() => (<Profile page = "requests" />)} />
-          <Route path = "/profile/missions" render = {() => (<Profile page = "missions" />)} />
+          <Route path = "/profile/account" component = {AccountPage} />
+          <Route path = "/profile/requests" component = {RequestsPage} />
+          <Route path = "/profile/missions" component = {MissionsPage} />
         </Switch>
       </Page>
     </Router>

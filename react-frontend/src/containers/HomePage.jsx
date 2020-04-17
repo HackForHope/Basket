@@ -150,7 +150,7 @@ const helperDummyData = [
 ]
 
 const businesses = orderData.businesses;
-export default class Home extends Component{
+export default class HomePage extends Component{
     constructor(props){
         super(props)
         this.state = {
@@ -226,5 +226,3 @@ export default class Home extends Component{
         )
     }
 }
-
-// {this.state.isRequest ? () : 
