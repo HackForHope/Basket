@@ -66,6 +66,10 @@ const MenuButton = styled(Link)`
     border: solid black 0.2rem;
     text-decoration: none;
     z-index: 5;
+
+    &:hover {
+        background: lightGray;
+    }
 `
 
 export default class NavBar extends Component{
