@@ -28,7 +28,7 @@ function App() {
       <NavBar />
       <Page>
         <Switch>
-          <Route exact path = "/" render = {() => (<Redirect from='/' to='/home' />)} />
+          <Route exact path = "/" render = {() => (<Redirect from='/' to='/first' />)} />
           <Route exact path = "/home" component = {HomePage} />
           <Route exact path = "/shop" component = {ShopPage} />
           <Route exact path = "/first" component = {FirstPage} />

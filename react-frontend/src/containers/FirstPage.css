@@ -1,5 +1,5 @@
-h2{
-  position: absolute;
+.first-page-h2 {
+position: absolute;
 width: 660px;
 height: 124px;
 left: 15px;
@@ -40,7 +40,7 @@ backdrop-filter: blur(4px);
 }
 
 
-P{
+.first-page-p {
 position: absolute;
 width: 746px;
 height: 90px;

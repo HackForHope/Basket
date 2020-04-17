@@ -3,21 +3,11 @@
   outline: none;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: #DDD;
-  font-size: 16px;
-  color: #222;
-  font-family: Monserrat;
-  font-weight: 300;
-}
-
 #login-box {
   position: relative;
   margin: 5% auto;
-  width: 600px;
-  height: 400px;
+  width: 60rem;
+  height: 45rem;
   background: #FFF;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -28,15 +18,15 @@ body {
   top: 0;
   left: 0;
   box-sizing: border-box;
-  padding: 40px;
-  width: 300px;
-  height: 400px;
+  padding: 80px 45px;
+  width: 25rem;
+  height: 45rem;
 }
 
 h1 {
   margin: 0 0 20px 0;
-  font-weight: 300;
-  font-size: 28px;
+  font-weight: 700;
+  font-size: 40px;
   font-family: Monserrat;
 }
 
@@ -44,15 +34,15 @@ input[type="text"],
 input[type="password"] {
   display: block;
   box-sizing: border-box;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding: 4px;
-  width: 220px;
-  height: 32px;
+  width: 300px;
+  height: 40px;
   border: none;
   border-bottom: 1px solid #AAA;
   font-family: Monserrat;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 20px;
   transition: 0.2s ease;
 }
 
@@ -64,15 +54,16 @@ input[type="password"]:focus {
 }
 
 input[type="submit"] {
-  margin-top: 28px;
-  width: 120px;
-  height: 32px;
+  margin-top: 30px;
+  width: 200px;
+  height: 60px;
   background: #FEDA0F;
   border: none;
   border-radius: 2px;
   color: #000000;
   font-family: Monserrat;
   font-weight: 500;
+  font-size: 20px;
   text-transform: uppercase;
   transition: 0.1s ease;
   cursor: pointer;
@@ -93,14 +84,14 @@ input[type="submit"]:active {
 
 .or {
   position: absolute;
-  top: 180px;
-  left: 280px;
-  width: 40px;
-  height: 40px;
+  top: 20rem;
+  left: 27.5rem;
+  width: 80px;
+  height: 80px;
   background: #FEDA0F;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  line-height: 40px;
+  line-height: 80px;
   text-align: center;
   font-family: Monserrat;
 }
@@ -110,9 +101,9 @@ input[type="submit"]:active {
   top: 0;
   right: 0;
   box-sizing: border-box;
-  padding: 40px;
-  width: 300px;
-  height: 400px;
+  padding: 45px 80px;
+  width: 30rem;
+  height: 45rem;
   background: url('https://i.ibb.co/JqB4BK6/2.jpg');
   background-size: cover;
   background-position: center;
@@ -122,21 +113,23 @@ input[type="submit"]:active {
 .right .loginwith {
   display: block;
   margin-bottom: 40px;
-  font-size: 28px;
+  font-size: 40px;
+  font-weight: 700;
   color: #FFF;
   font-family: Monserrat;
   text-align: right;
 }
 
 button.social-signin {
-  margin-bottom: 20px;
-  width: 220px;
-  height: 36px;
+  margin-bottom: 30px;
+  width: 300px;
+  height: 80px;
   border: none;
   border-radius: 2px;
   color: #FFF;
   font-family: Monserrat;
   font-weight: 500;
+  font-size: 20px;
   transition: 0.2s ease;
   cursor: pointer;
 }

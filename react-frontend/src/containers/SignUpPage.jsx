@@ -1,12 +1,29 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
 import './SignUpPage.css';
+ 
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #DDD;
+  font-size: 16px;
+  color: #222;
+  font-family: Monserrat;
+  font-weight: 300;
+  background-image: url('https://i.ibb.co/j4pfVsV/image.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+`
 
 export default class SignUpPage extends Component{
   render() {
     return (
-      <div>
+      <Container>
         <link rel="stylesheet" type="text/css" href="SignUpPage.css" />
-        <style dangerouslySetInnerHTML={{__html: "\n\n  body {\n  background-image: url('https://i.ibb.co/j4pfVsV/image.jpg');\n  background-repeat: no-repeat;\n  background-attachment: fixed; \n  background-size: cover;\n  }\n\n" }} />
         <div id="login-box">
           <div className="left">
             <h1>Sign Up</h1>
@@ -24,7 +41,7 @@ export default class SignUpPage extends Component{
           </div>
           <div className="or">OR</div>
         </div>
-      </div>
+      </Container>
     );
   }
 }
