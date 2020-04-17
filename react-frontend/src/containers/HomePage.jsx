@@ -60,7 +60,7 @@ const Toggle = styled.div`
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 15px;
     width: 100%;
     height: 100%;
     background: ${props => props.checked ? "#FFD31D" : "#FFFFEE"};
