@@ -20,7 +20,6 @@ const Page = styled.div`
   top: 60px;
   padding: 0 auto;
 `
-
 function App() {
   return (
     <Router>

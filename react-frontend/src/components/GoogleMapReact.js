@@ -1,22 +1,7 @@
 import React, { useState, Component } from 'react';
 import {GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow} from 'react-google-maps';
-import * as orderData from "./data/order.json";
+import * as orderData from "../data/order.json";
 
-const AnyReactComponent = ({ text }) => (
-  <div style={{
-    color: 'white',
-    background: 'red',
-    padding: '5px 5px',
-    display: 'inline-flex',
-    textAlign: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '100%',
-    transform: 'translate(-50%, -50%)'
-  }}>
-    {text}
-  </div>
-);
 
 
 // function Map() {
@@ -63,8 +48,6 @@ export class Map extends Component {
           />)
         }
         )};
-        
-        
       </GoogleMap>
     );
   }
@@ -73,12 +56,12 @@ export class Map extends Component {
 
 // src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXPrmkjAfz6u3Asz_X4JivUsOhQ56y2_8&callback=initMap">
 
-const WrappedMap = withScriptjs(withGoogleMap(Map));
-export default class MainPage extends Component{
+export default class CompleteMap extends Component{
   render(){ 
+  const WrappedMap = withScriptjs(withGoogleMap(Map));
   return (
-      <div style={{width: '75vw', height: '100vh', marginLeft:'40%'}}>
-          <WrappedMap googleMapURL = {`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,palces&key=AIzaSyAXPrmkjAfz6u3Asz_X4JivUsOhQ56y2_8&callback=initMap`} 
+      <div style={{width: '65vw', height: '100vh'}}>
+          <WrappedMap googleMapURL = {`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,palces&key=AIzaSyAXPrmkjAfz6u3Asz_X4JivUsOhQ56y2_8`} 
           loadingElement = {<div style={{ height: "100%"}}/>}
           containerElement = {<div style={{ height: "100%"}}/>}
           mapElement = {<div style={{ height: "100%"}}/>}
@@ -88,4 +71,3 @@ export default class MainPage extends Component{
       );
   };
 }
-
