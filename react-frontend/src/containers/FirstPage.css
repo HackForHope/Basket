@@ -1,0 +1,175 @@
+h2{
+  position: absolute;
+width: 660px;
+height: 124px;
+left: 15px;
+top: 109px;
+
+font-family: Monserrat;
+font-style: normal;
+font-weight: 800;
+font-size: 96px;
+line-height: 106px;
+text-align: center;
+
+color: #000000;
+
+mix-blend-mode: normal;
+backdrop-filter: blur(4px);
+
+}
+
+h3{
+  position: absolute;
+width: 953px;
+height: 119px;
+left: 53px;
+top: 224px;
+
+font-family: Monserrat;
+font-style: normal;
+font-weight: 800;
+font-size: 80px;
+line-height: 106px;
+text-align: center;
+
+color: #000000;
+
+mix-blend-mode: normal;
+backdrop-filter: blur(4px);
+}
+
+
+P{
+position: absolute;
+width: 746px;
+height: 90px;
+left: 80px;
+top: 423px;
+
+font-family: Monserrat;
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 20px;
+text-align: center;
+
+color: #000000;
+
+}
+
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+
+.button {
+  position: absolute;
+  height: 67px;
+  left: 300px;
+  top: 555px;
+  display: inline-block;
+  border-radius: 89px;
+  background-color: #FEDA0F;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 20px;
+  font-family: Monserrat;
+  font-style: normal;
+  font-weight: 800;
+  padding: 20px;
+  width: 318px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
