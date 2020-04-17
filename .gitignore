@@ -4,3 +4,5 @@ flask-backend/static/templates/*
 react-frontend/package-lock.json
 .DS_Store
 */.DS_Store
+
+secret.py
