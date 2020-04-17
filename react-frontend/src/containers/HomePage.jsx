@@ -87,6 +87,10 @@ const RegisterButton = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
 `
 
 const reqDummyData = [
