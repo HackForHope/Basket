@@ -29,7 +29,6 @@ const Icon = styled(Link)`
     border-radius: 10px;
     text-decoration: none;
     z-index: 5;
-    background-color: #FDD465;
 `
 
 const ProfileIcon = styled(Icon)`
@@ -39,9 +38,11 @@ const ProfileIcon = styled(Icon)`
 
 const HomeIcon = styled(Icon)`
     left: 0;
-    background-image: url("https://i.ibb.co/NYy7PBd/1.png");
+    background-image: url("https://i.ibb.co/7zfJGpT/2020-04-17-6-20-19.png");
     background-repeat: no-repeat;
-    z-index: 5;
+    background-size: cover;
+    position: relative;
+    z-index: 6;
 `
 
 const Menu = styled.div`
