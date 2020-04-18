@@ -193,10 +193,18 @@ export default class HomePage extends Component{
 
     render(){
         if(this.state.isRequest){
-            fetch("/active-request").then(response =>
+            const that = this;
+            console.log("here")
+            fetch("/active-helper").then(response =>
                 response.json().then(data => {
-                    // this.setState({activeRequests : data})
-                    console.log(data.array);
+                    console.log(data);
+                    return data;
+                }).then(function(jsonData){
+                    return JSON.stringify(jsonData);
+                }
+                ).then(function(jsonStr){
+                    that.setState({activeRequests: jsonStr});
+                    console.log(jsonStr);
                 })
             , []);
         }else{
