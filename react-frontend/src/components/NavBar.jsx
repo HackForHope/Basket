@@ -16,7 +16,7 @@ const Header = styled.div`
     left: 0;
     height: 60px;
     width: 100%;
-    background: yellow;
+    background: #FFFFEE;
     z-index: 5;
 `
 
@@ -26,18 +26,22 @@ const Icon = styled(Link)`
     height: 40px;
     width: 40px;
     top: 0;
-    background: white;
-    border: solid black 0.2rem;
+    border-radius: 10px;
     text-decoration: none;
     z-index: 5;
+    background-color: #FDD465;
 `
 
 const ProfileIcon = styled(Icon)`
-    right: 0;  
+    right: 0;
+    background-color: #FDD465;
 `
 
 const HomeIcon = styled(Icon)`
     left: 0;
+    background-image: url("https://i.ibb.co/NYy7PBd/1.png");
+    background-repeat: no-repeat;
+    z-index: 5;
 `
 
 const Menu = styled.div`
@@ -46,6 +50,7 @@ const Menu = styled.div`
     height: 100%;
     width: 20rem;
     z-index: 5;
+
 `
 
 const SpaceAboveMenu = styled.div`
@@ -53,21 +58,24 @@ const SpaceAboveMenu = styled.div`
     height: 60px;
 `
 
+//AccountInfo,MyRequest,MyMission
 const MenuButton = styled(Link)`
     width: 100%;
     height: 6rem;
     padding: 2rem 0;
     display: flex;
     color: black;
-    font-size: 32px;
-    font-weight: semi-bold;
+    font-size: 20px;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background: white;
-    border: solid black 0.2rem;
-    text-decoration: none;
+    text-align: right;
+    background: #FFFFEE;
+    border: #C4C4C4 0.1rem;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
     z-index: 10;
+    border-radius: 2px;
 
     &:hover {
         background: lightGray;
