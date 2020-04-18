@@ -89,75 +89,32 @@ const RegisterButton = styled.div`
     background: ${props => props.checked ? "#FFD31D" : "#FFFFEE"};
 `
 
-const reqDummyData = [
-    {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
-    }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
-    }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
-    }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
-    }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
-    }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
-    }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
-    }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
-    }
-]
 
-const helperDummyData = [
+const helperData = [
     {
-        tag1: "hey",
-        tag2: "this is",
-        tag3: "dummy data!"
+        tag1: "Fiona",
+        tag2: "@FionaZhang888",
+        tag3: "34.052235, -118.243683"
     }, {
-        tag1: "hey",
-        tag2: "this is",
-        tag3: "dummy data!"
+        tag1: "Julie!",
+        tag2: "@JulieShi666",
+        tag3: "34.028294, -118.27521",
     }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
+        tag1: "Elaine",
+        tag2: "@Wangyuan233",
+        tag3: "34.01697, -118.288765"
     }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
+        tag1: "Marie",
+        tag2: "@Mariee",
+        tag3: "34.03447, -118.28341!"
     }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
+        tag1: "Cici",
+        tag2: "Ciciiii",
+        longitude: "34.01621, -118.28738!"
     }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
-    }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
-    }, {
-        tag1: "hi",
-        tag2: "this is",
-        tag3: "dummy data!"
+        tag1: "Ricardo",
+        tag2: "Ricardo222",
+        tag3: "34.0474, -118.299644"
     }
 ]
 
@@ -169,7 +126,8 @@ export default class HomePage extends Component{
             isRequest: true,
             registeredHelper: false,// actually need to look at account info first
             activeID: -1,
-            activeRequests : {}
+            activeRequests : [],
+            activeHelpers : []
         }
         this.handleToggle = this.handleToggle.bind(this);
         // this.handleMouseEnter = this.handleMouseEnter.bind(this);
@@ -190,32 +148,21 @@ export default class HomePage extends Component{
         console.log(orderHovered.id);
     }
     
+    componentDidMount(){
+        fetch("/active-request")
+            .then(response => response.json()).
+            then(data => {
+                // this.setState({activeRequests : data})
+                console.log(data.array);
+            });
+        fetch("/active-helper").then(response =>
+            response.json()).then(data => {
+                // this.setState({activeHelpers : data})
+            });
+    }
 
     render(){
-        if(this.state.isRequest){
-            const that = this;
-            console.log("here")
-            fetch("/active-helper").then(response =>
-                response.json().then(data => {
-                    console.log(data);
-                    return data;
-                }).then(function(jsonData){
-                    return JSON.stringify(jsonData);
-                }
-                ).then(function(jsonStr){
-                    that.setState({activeRequests: jsonStr});
-                    console.log(jsonStr);
-                })
-            , []);
-        }else{
-            console.log("here")
-            fetch("/active-helper").then(response =>
-                response.json().then(data => {
-                    console.log(data);
-                })
-            , []);
-        }
-        return(
+            return(
             <Container>
                 <LeftCol>
                     <Toggles>
@@ -233,11 +180,14 @@ export default class HomePage extends Component{
                                                     </div>
                                                     )
                                                 }): 
-                                            helperDummyData.map((dummy) => {
-                                                return (<Entry title = {dummy.tag1}
+                                            helperData.map((dummy) => {
+                                                return (
+                                                    <div onClick={() => this.handleOnClick(dummy)}><Entry title = {dummy.tag1}
                                                                text1 = {dummy.tag2}
                                                                text2 = {dummy.tag3}>
-                                                        </Entry>)})}
+                                                        </Entry>
+                                                    </div>)})
+                                                }
                     </List>
                     {this.state.isRequest ? (<PostRequestButton to = '/shop'>Post a request</PostRequestButton>) : 
                                             (<RegisterButton

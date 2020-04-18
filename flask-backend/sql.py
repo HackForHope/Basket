@@ -4,7 +4,7 @@ con = mysql.connector.connect(
   host="basket-squad.mysql.database.azure.com",
   port="3306",
   user="basket@basket-squad",
-  passwd="mohmu7-qopvif-bynFez"
+  passwd="mohmu7-qopvif-bynFez",
 )
 mycursor = con.cursor()
 def initialize():
