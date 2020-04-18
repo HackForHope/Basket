@@ -1,20 +1,21 @@
 import mysql.connector
+import secret
+
 con = mysql.connector.connect(
-  host="localhost",
+  host="sql3.freemysqlhosting.net",
   port="3306",
-  user="root",
-  passwd=PASSWORD
+  user="sql3334243",
+  passwd=secret.MY_PASSWORD
 )
 mycursor = con.cursor()
-
 def initialize():
-    mycursor.execute("DROP database IF EXISTS basketdatabase;")
+    mycursor.execute("DROP database IF EXISTS sql3334243;")
     # create seven tables request, helpbinding, user, market, shopping cart, order table, supermarkets.
 
-    mycursor.execute("create database basketdatabase");
+    mycursor.execute("create database sql3334243");
 
     #cart table
-    mycursor.execute("USE basketdatabase")
+    mycursor.execute("USE sql3334243")
 
     # user table
     mycursor.execute("CREATE TABLE users (userID int AUTO_INCREMENT PRIMARY KEY, name varchar(255) NOT NULL,google_id varchar(255) NOT NULL,live_address varchar(80),address varchar(80), lat FLOAT(6),lng FLOAT(6));")
@@ -89,7 +90,7 @@ def get_request_by_requested(requestedUserID):
 
 def get_order_by_user(userID):
     sql = "SELECT * FROM order_list WHERE userID = %s;"
-    val = (userID);
+    val = (userID)
     mycursor.execute(sql,val)
 
 def get_order_by_ID(orderID):
@@ -98,11 +99,6 @@ def get_order_by_ID(orderID):
     mycursor.execute(sql,val)
     result = mycursor.fetchall()
     return result
+ 
 
-initialize()
-
-#cart table
-mycursor.execute("USE basketdatabase")
-
-print(get_order_by_ID(1))
-con.close()
+# initialize()

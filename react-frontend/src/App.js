@@ -25,7 +25,7 @@ const Page = styled.div`
 function App() {
   const [movies, setMovies] = useState([]); 
   useEffect(() => {
-    fetch("/movies").then(response =>
+    fetch("/order").then(response =>
       response.json().then(data => {
         console.log(data);
         setMovies(data.movies);

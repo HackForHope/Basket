@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {Component, useEffect, useState, setState} from 'react';
 import styled from 'styled-components';
 import './SignUpPage.css';
+import {Redirect} from 'react-router-dom';
  
 const Container = styled.div`
   width: 100%;
@@ -19,7 +20,7 @@ const Container = styled.div`
   background-size: cover;
 `
 
-export default function SignUpPage(){
+export default class SignUpPage extends Component{
     // const [movies, setMovies] = useState([]);
     // useEffect(() => {
     //   fetch('/movies').json().then(data => {
@@ -27,6 +28,29 @@ export default function SignUpPage(){
     //     console.log("data")
     //   });
     // }, []);
+    constructor(props){
+      super(props)
+      this.state = { submit : false }
+      this.handleClick = this.handleClick.bind(this);
+ 
+    }
+    async handleClick(e){
+      const user = ["julie", "my@gmail.com", "password"];
+      this.setState(state => ({submit : true}));
+      const response = await fetch("/register", {
+        method : 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+      });
+      console.log("here");
+    }
+    render(){
+    if (this.state.submit === true) {
+      console.log("here");
+      return (<Redirect from='/signup' to="/home" />);
+    }
     return (
       <Container>
         <link rel="stylesheet" type="text/css" href="SignUpPage.css" />
@@ -37,7 +61,7 @@ export default function SignUpPage(){
             <input type="text" name="email" placeholder="E-mail" />
             <input type="password" name="password" placeholder="Password" />
             <input type="password" name="password2" placeholder="Retype password" />
-            <input type="submit" name="signup_submit" defaultValue="Sign me up" />
+            <input type="submit" onClick={this.handleClick} name="signup_submit" defaultValue="Sign me up" />
           </div>
           <div className="right">
             <span className="loginwith">Sign In with<br />Social Network</span>
@@ -48,6 +72,7 @@ export default function SignUpPage(){
           <div className="or">OR</div>
         </div>
       </Container>
+      
     );
-  
+    } 
 }

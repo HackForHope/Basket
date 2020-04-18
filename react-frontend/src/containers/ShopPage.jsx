@@ -28,12 +28,12 @@ export default class ShopPage extends Component {
                 <Nav />
                 <div className="myApp">
 
-                    <form className="shop-search-form">
+                    {/* <form className="shop-search-form">
                         <input className="shop-search-bar" type="text" />
                         <button className="shop-search-button" type="submit" >
                             Search
                         </button>
-                    </form>
+                    </form> */}
 
                     <AddItem />
                     <SearchButton />

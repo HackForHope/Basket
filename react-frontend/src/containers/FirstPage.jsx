@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 
 export default class FirstPage extends Component{
   render() {
-    console.log("asdf");
     return (
       <div>
         <link rel="stylesheet" type="text/css" href="FirstPage.css" />
