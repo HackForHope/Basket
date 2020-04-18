@@ -33,7 +33,9 @@ const Icon = styled(Link)`
 
 const ProfileIcon = styled(Icon)`
     right: 0;
-    background-color: #FDD465;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 `
 
 const HomeIcon = styled(Icon)`
@@ -41,8 +43,6 @@ const HomeIcon = styled(Icon)`
     background-image: url("https://i.ibb.co/7zfJGpT/2020-04-17-6-20-19.png");
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    z-index: 6;
 `
 
 const Menu = styled.div`
