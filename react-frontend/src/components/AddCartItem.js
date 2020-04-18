@@ -13,7 +13,6 @@ const AddCartItem = (props) => {
         setItems(prevItems => [...prevItems, { name: n, price: p, quantity: 1, id: prevItems.length }])
     };
 
-
     return (
         <div>
             <button onClick={addItem}> Add to Cart</button>

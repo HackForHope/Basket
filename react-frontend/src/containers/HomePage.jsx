@@ -183,15 +183,7 @@ export default class HomePage extends Component{
             })
         }
     }
-/*TODO Notworking yet */
-    // handleMouseEnter(orderHovered){
-    //     this.setState({activeID: orderHovered});
-    //     console.log("here");
-    // }
 
-    // handleMouseLeave(orderHovered){
-    //     console.log("Haha" + {orderHovered.id});
-    // }
 
     handleOnClick(orderHovered){
         console.log(orderHovered.id);
@@ -199,7 +191,7 @@ export default class HomePage extends Component{
     
 
     render(){
-        if(this.state.Request){
+        if(this.state.isRequest){
             fetch("/active-request").then(response =>
                 console.log(response)
             );
@@ -211,7 +203,6 @@ export default class HomePage extends Component{
                 })
             );
         }
-        
         return(
             <Container>
                 <LeftCol>

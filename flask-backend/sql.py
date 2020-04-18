@@ -24,23 +24,23 @@ def initialize():
 
     # cart table
     mycursor.execute("CREATE TABLE cart(cartID int AUTO_INCREMENT PRIMARY KEY, orderID int(10), userID int(10), goodID int(10), num int(10), price FLOAT(2));")
-
+    
     #order table
-    mycursor.execute("CREATE TABLE order_list(orderID int AUTO_INCREMENT PRIMARY KEY, helperUserID int(10), requestedUserID int (10),cartID int(10),order_summary varchar(255), lat FLOAT(4), lng FLOAT(4), isTaken boolean, isFinished boolean);")
+    mycursor.execute("CREATE TABLE order_list(orderID int AUTO_INCREMENT PRIMARY KEY, helperUserID int(10), requestedUserID int (10), cartID int(10), order_summary varchar(255), lat FLOAT(4), lng FLOAT(4), isTaken boolean, isFinished boolean);")
 
     #supermaket table
     mycursor.execute("CREATE TABLE supermarket (supermarketID int AUTO_INCREMENT PRIMARY KEY, name varchar(255), address varchar(80), lat FLOAT(4) NOT NULL,lng FLOAT(4) NOT NULL);")
 
 #register a user
 def register(username, email, password):
-    sql = "INSERT INTO users (name, email, password) VALUES (%s, %s, %s); "
+    sql = "INSERT INTO users (name, email, password, isActiveFalse) VALUES (%s, %s, %s, False); "
     val = (username, email, password)
     mycursor.execute(sql,val)
     con.commit()
 
 #create a request
 def add_to_request(helperID,requestedUserID,status=False):
-    sql = "INSERT INTO request (helperUserID, requestedUserID,status) VALUES (%s,%s, %s);"
+    sql = "INSERT INTO request (helperUserID, requestedUserID, status) VALUES (%s,%s, %s);"
     val = (helperID,requestedUserID,status)
     mycursor.execute(sql,val)
     con.commit()
@@ -79,6 +79,16 @@ def get_active_request():
     mycursor.execute(sql)
     result = mycursor.fetchall()
     return result
+
+
+#get active request
+def get_active_helper():
+    sql = "SELECT * FROM order_list WHERE isActive=True;"
+    mycursor.execute(sql)
+    result = mycursor.fetchall()
+    print(result)
+    return result
+
 
 #return a request by helper ID
 def get_request_by_helper(helperID):
