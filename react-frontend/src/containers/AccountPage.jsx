@@ -60,25 +60,46 @@ const ProfilePic = styled.div`
     margin: 2rem;
 `
 
-const dummyAddr = ["dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!"]
+const Input = styled.input`
+    height: 8rem;
+    width: 15rem;
+    padding: 0.8rem;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center
+    font-size: 25px;
+`
 
 export default class AccountPage extends Component{
     constructor(props){
         super(props);
+        this.state = {
+            addresses: ["70 Morningside Dr, New York, NY", "Morris A Schapiro Hall, 605W 115th St, New York, NY", "Oakdale South, Charlotte, NC", "4352 Tuckageesee Rd, Charlotte, NC", "2794 Broadway, New York, NY 10025"]
+        }
+        this.addAddress = this.addAddress.bind(this)
+    }
+
+    addAddress(event){
+        if (event.key === 'Enter'){
+            this.setState({
+                addresses: [event.target.value, ...this.state.addresses]
+            })
+        }
     }
 
     render(){
         return (
             <Container>
                 <Col1>
-                    <Title>xxx's profile page</Title>
-                    <Email>xxxx@gmal.com</Email>
-                    <Contact>0101010101</Contact>
-                    <Addresses addresses = {dummyAddr}/>
+                    <Title>elaineha's profile page</Title>
+                    <Email>yw3241@columbia.edu</Email>
+                    <Addresses addresses = {this.state.addresses}/>
+                    <Input type="text" name="address" placeholder="Add new address" onKeyDown={this.addAddress}></Input>
                 </Col1>
                 <Col2>
                     <ProfilePic img = "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></ProfilePic>
-                    <Bio>blahblahblahblahbl, ahblahblahblahblahblahblahblah. blahblahblahblahblahblah. blahblahblahblahblahblah! ^_^</Bio>
+                    <Bio>Love to help the peeps in the Charlotte neighborhood! Let's all stay at home and fight COVID19. :)</Bio>
                 </Col2>
             </Container>
         )

@@ -13,10 +13,12 @@ const Container = styled.div`
 
 const Address = styled.div`
     margin: 0.8rem 0;
-    height: 5rem;
+    padding: 0.5rem 2rem;
     width: 100%;
-    background: lightGray;
+    background: white;
     text-align: center;
+    font-size: 20px;
+    line-height: 30px;
 `
 export default class Addresses extends Component {
     render(){

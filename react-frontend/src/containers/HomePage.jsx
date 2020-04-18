@@ -213,7 +213,7 @@ export default class HomePage extends Component{
                         <Toggle checked = {this.state.isRequest} onClick = {() => this.handleToggle(true)}>Requests</Toggle>
                         <Toggle checked = {!this.state.isRequest} onClick = {() => this.handleToggle(false)}>Helpers</Toggle>
                     </Toggles>
-                    <List>{this.state.isRequest ? this.state.activeRequests.map((order) => {
+                    <List>{this.state.isRequest ? orderData.businesses.map((order) => {
                         //onMouseEnter={(order) => this.handleMouseEnter(order)} onMouseLevae={()=> this.handleMouseLeave(order)}
                                                 return (
                                                     <div onClick={() => this.handleOnClick(order)}>
@@ -224,7 +224,7 @@ export default class HomePage extends Component{
                                                     </div>
                                                     )
                                                 }): 
-                                            this.state.activeHelpers.map((dummy) => {
+                                            helperDummyData.map((dummy) => {
                                                 return (<Entry title = {dummy.tag1}
                                                                text1 = {dummy.tag2}
                                                                text2 = {dummy.tag3}>
