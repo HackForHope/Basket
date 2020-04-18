@@ -35,7 +35,7 @@ export default class SignUpPage extends Component{
  
     }
     async handleClick(e){
-      const user = ["julie", "my@gmail.com", "password"];
+      const user = ["julie", "123", "password"];
       this.setState(state => ({submit : true}));
       const response = await fetch("/register", {
         method : 'POST',
@@ -43,12 +43,14 @@ export default class SignUpPage extends Component{
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(user)
-      });
-      console.log("here");
+      })
+      if (response.ok){
+        console.log("OK :)");
+      }
     }
+
     render(){
     if (this.state.submit === true) {
-      console.log("here");
       return (<Redirect from='/signup' to="/home" />);
     }
     return (

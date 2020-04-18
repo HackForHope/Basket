@@ -5,9 +5,11 @@ con = mysql.connector.connect(
   host="sql3.freemysqlhosting.net",
   port="3306",
   user="sql3334243",
-  passwd=secret.MY_PASSWORD
+  passwd="UgvPAufppk"
 )
 mycursor = con.cursor()
+mycursor.execute("USE sql3334243")
+
 def initialize():
     mycursor.execute("DROP database IF EXISTS sql3334243;")
     # create seven tables request, helpbinding, user, market, shopping cart, order table, supermarkets.
@@ -36,9 +38,9 @@ def initialize():
     mycursor.execute("CREATE TABLE supermarket (supermarketID int AUTO_INCREMENT PRIMARY KEY, name varchar(255), address varchar(80), lat FLOAT(4) NOT NULL,lng FLOAT(4) NOT NULL);")
 
 #register a user
-def register(name, google_id):
-    sql = "INSERT INTO users (name, google_id) VALUES (%s, %s);"
-    val = (name,google_id)
+def register(username, email, password):
+    sql = "INSERT INTO users (name, google_id) VALUES (%s, %s, %s);"
+    val = (username, email, password)
     mycursor.execute(sql,val)
 
 #update profile
@@ -100,5 +102,9 @@ def get_order_by_ID(orderID):
     result = mycursor.fetchall()
     return result
  
-
+def get_all_orders():
+    sql = "SELECT * FROM order_list;"
+    mycursor.execute(sql)
+    result = mycursor.fetchall()
+    return result
 # initialize()

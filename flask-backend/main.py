@@ -6,27 +6,26 @@ import secret
 app = flask.Flask('__main__')
 main = Blueprint('main', __name__)
 
-
 @app.route('/', defaults ={'path': ''})
 @app.route('/<path:path>')
-def my_index(path):
+def _index(path):
     return flask.render_template("index.html", token="Hello Flask + React")
 
 @app.route('/order')
-def order():
+def _order():
     request=[]
     request.append({'title' : 'avatar', 'rating': '9.1'})
     print(type(jsonify({"movies:" : request})))
     return jsonify({"movies:" : request})
 
 @app.route('/register', methods=['POST'])
-def register():
+def _register():
     register_data = request.get_json()
-    # sql = "INSERT INTO users (name, google_id) VALUES (%s, %s);"
-    val = (register_data['name'],register_data['googleid'])
-    mycursor.execute(sql,val)
-
+    print(register_data[0],register_data[1], register_data[2])
+    # register(register_data[0], (int)(register_data[1]), register_data[2])
     return 'Done', 201
+
+
 
 # app.register_blueprint(main)
 app.run(debug=True)
