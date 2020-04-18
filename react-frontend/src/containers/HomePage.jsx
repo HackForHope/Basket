@@ -182,7 +182,6 @@ export default class HomePage extends Component{
                 isRequest: isRequest
             })
         }
-
     }
 /*TODO Notworking yet */
     // handleMouseEnter(orderHovered){
@@ -198,7 +197,21 @@ export default class HomePage extends Component{
         console.log(orderHovered.id);
     }
     
+
     render(){
+        if(this.state.Request){
+            fetch("/active-request").then(response =>
+                console.log(response)
+            );
+        }else{
+            console.log("here")
+            fetch("/active-helper").then(response =>
+                response.json().then(data => {
+                    console.log(data);
+                })
+            );
+        }
+        
         return(
             <Container>
                 <LeftCol>
