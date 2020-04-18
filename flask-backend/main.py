@@ -1,7 +1,7 @@
 import flask
 from flask import Blueprint, jsonify, request
 from sql import *
-import secret
+
 
 app = flask.Flask('__main__')
 main = Blueprint('main', __name__)
@@ -21,8 +21,8 @@ def _order():
 @app.route('/register', methods=['POST'])
 def _register():
     register_data = request.get_json()
-    print(register_data[0],register_data[1], register_data[2])
-    # register(register_data[0], (int)(register_data[1]), register_data[2])
+    # print(register_data[0],register_data[1], register_data[2])
+    register(register_data[0], register_data[1], register_data[2])
     return 'Done', 201
 
 
