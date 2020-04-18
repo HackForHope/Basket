@@ -195,9 +195,8 @@ export default class HomePage extends Component{
         if(this.state.isRequest){
             fetch("/active-request").then(response =>
                 response.json().then(data => {
-                    this.setState({activeRequests : data})
-                    console.log(this.state.activeRequests);
-                    
+                    // this.setState({activeRequests : data})
+                    console.log(data.array);
                 })
             , []);
         }else{
@@ -215,7 +214,7 @@ export default class HomePage extends Component{
                         <Toggle checked = {this.state.isRequest} onClick = {() => this.handleToggle(true)}>Requests</Toggle>
                         <Toggle checked = {!this.state.isRequest} onClick = {() => this.handleToggle(false)}>Helpers</Toggle>
                     </Toggles>
-                    <List>{this.state.isRequest ? this.order.businesses.map((order) => {
+                    <List>{this.state.isRequest ? orderData.businesses.map((order) => {
                         //onMouseEnter={(order) => this.handleMouseEnter(order)} onMouseLevae={()=> this.handleMouseLeave(order)}
                                                 return (
                                                     <div onClick={() => this.handleOnClick(order)}>

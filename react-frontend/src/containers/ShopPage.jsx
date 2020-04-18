@@ -35,7 +35,7 @@ export default class ShopPage extends Component {
                         </button>
                     </form> */}
 
-                    <AddItem />
+                    {/* <AddItem /> */}
                     <SearchButton />
                     <p>Search Result</p>
                     <SearchList className='multiBlock' />

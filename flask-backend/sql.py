@@ -152,5 +152,4 @@ def delete(table_name):
 mycursor.execute("USE basketdata")
 con.commit()
 #register("jl", "mike@qq.com", "1234")
-# print(get_order_by_user(1))
 # get_active_request()
