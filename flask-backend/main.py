@@ -6,6 +6,7 @@ from sql import *
 app = flask.Flask('__main__')
 main = Blueprint('main', __name__)
 
+
 @app.route('/', defaults ={'path': ''})
 @app.route('/<path:path>')
 def _index(path):
@@ -21,8 +22,8 @@ def _order():
 @app.route('/register', methods=['POST'])
 def _register():
     register_data = request.get_json()
-    # print(register_data[0],register_data[1], register_data[2])
     register(register_data[0], register_data[1], register_data[2])
+    print(get_all_users())
     return 'Done', 201
 
 

@@ -108,3 +108,9 @@ def get_all_orders():
     result = mycursor.fetchall()
     return result
 # initialize()
+
+def get_all_users():
+    sql = "SELECT * FROM users;"
+    mycursor.execute(sql)
+    result = mycursor.fetchall()
+    return result

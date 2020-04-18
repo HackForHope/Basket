@@ -35,7 +35,7 @@ export default class SignUpPage extends Component{
  
     }
     async handleClick(e){
-      const user = ["julie", "123", "password"];
+      const user = ["julie", "julieshi@usc.edu", "password"];
       this.setState(state => ({submit : true}));
       const response = await fetch("/register", {
         method : 'POST',
