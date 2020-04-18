@@ -37,7 +37,17 @@ const Email = styled.p`
 `
 const Contact = styled.p`
 `
-const Bio = styled.p`
+const Bio = styled.div`
+    width: 30rem;
+    padding: 2rem;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Monserrat;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 25px;
 `
 
 const ProfilePic = styled.div`
@@ -47,6 +57,7 @@ const ProfilePic = styled.div`
     width: 20rem;
     border: solid black 0.2rem;
     border-radius: 3rem;
+    margin: 2rem;
 `
 
 const dummyAddr = ["dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!", "dummyaddr!!!!!!"]
@@ -67,7 +78,7 @@ export default class AccountPage extends Component{
                 </Col1>
                 <Col2>
                     <ProfilePic img = "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"></ProfilePic>
-                    <Bio>blahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblahblah</Bio>
+                    <Bio>blahblahblahblahbl, ahblahblahblahblahblahblahblah. blahblahblahblahblahblah. blahblahblahblahblahblah! ^_^</Bio>
                 </Col2>
             </Container>
         )
