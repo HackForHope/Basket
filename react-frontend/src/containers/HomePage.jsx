@@ -169,7 +169,8 @@ export default class HomePage extends Component{
             isRequest: true,
             registeredHelper: false,// actually need to look at account info first
             activeID: -1,
-            activeRequests : {}
+            activeRequests : [],
+            activeHelpers : []
         }
         this.handleToggle = this.handleToggle.bind(this);
         // this.handleMouseEnter = this.handleMouseEnter.bind(this);
@@ -190,23 +191,21 @@ export default class HomePage extends Component{
         console.log(orderHovered.id);
     }
     
+    componentDidMount(){
+        fetch("/active-request")
+            .then(response => response.json()).
+            then(data => {
+                this.setState({activeRequests : data})
+                console.log(data.array);
+            });
+        fetch("/active-helper").then(response =>
+            response.json()).then(data => {
+                this.setState({activeHelpers : data})
+            });
+    }
 
     render(){
-        if(this.state.isRequest){
-            fetch("/active-request").then(response =>
-                response.json().then(data => {
-                    // this.setState({activeRequests : data})
-                    console.log(data.array);
-                })
-            , []);
-        }else{
-            console.log("here")
-            fetch("/active-helper").then(response =>
-                response.json().then(data => {
-                    console.log(data);
-                })
-            , []);
-        }
+        
         return(
             <Container>
                 <LeftCol>
@@ -214,7 +213,7 @@ export default class HomePage extends Component{
                         <Toggle checked = {this.state.isRequest} onClick = {() => this.handleToggle(true)}>Requests</Toggle>
                         <Toggle checked = {!this.state.isRequest} onClick = {() => this.handleToggle(false)}>Helpers</Toggle>
                     </Toggles>
-                    <List>{this.state.isRequest ? orderData.businesses.map((order) => {
+                    <List>{this.state.isRequest ? this.state.activeRequests.map((order) => {
                         //onMouseEnter={(order) => this.handleMouseEnter(order)} onMouseLevae={()=> this.handleMouseLeave(order)}
                                                 return (
                                                     <div onClick={() => this.handleOnClick(order)}>
@@ -225,7 +224,7 @@ export default class HomePage extends Component{
                                                     </div>
                                                     )
                                                 }): 
-                                            helperDummyData.map((dummy) => {
+                                            this.state.activeHelpers.map((dummy) => {
                                                 return (<Entry title = {dummy.tag1}
                                                                text1 = {dummy.tag2}
                                                                text2 = {dummy.tag3}>
