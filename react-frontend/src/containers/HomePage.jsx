@@ -53,6 +53,7 @@ const PostRequestButton = styled(Link)`
     background: #FDD465;
     border-radius: 5px;
     font-family: Montserrat;
+    color: #000000;
     font-size: 20px;
 `
 
