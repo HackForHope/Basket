@@ -169,11 +169,12 @@ export default class HomePage extends Component{
             isRequest: true,
             registeredHelper: false,// actually need to look at account info first
             activeID: -1,
+            activeRequests : {}
         }
         this.handleToggle = this.handleToggle.bind(this);
         // this.handleMouseEnter = this.handleMouseEnter.bind(this);
         this.handleOnClick = this.handleOnClick.bind(this);
-
+        
     }
 
     handleToggle(isRequest){
@@ -193,15 +194,19 @@ export default class HomePage extends Component{
     render(){
         if(this.state.isRequest){
             fetch("/active-request").then(response =>
-                console.log(response)
-            );
+                response.json().then(data => {
+                    this.setState({activeRequests : data})
+                    console.log(this.state.activeRequests);
+                    
+                })
+            , []);
         }else{
             console.log("here")
             fetch("/active-helper").then(response =>
                 response.json().then(data => {
                     console.log(data);
                 })
-            );
+            , []);
         }
         return(
             <Container>
@@ -210,7 +215,7 @@ export default class HomePage extends Component{
                         <Toggle checked = {this.state.isRequest} onClick = {() => this.handleToggle(true)}>Requests</Toggle>
                         <Toggle checked = {!this.state.isRequest} onClick = {() => this.handleToggle(false)}>Helpers</Toggle>
                     </Toggles>
-                    <List>{this.state.isRequest ? orderData.businesses.map((order) => {
+                    <List>{this.state.isRequest ? this.order.businesses.map((order) => {
                         //onMouseEnter={(order) => this.handleMouseEnter(order)} onMouseLevae={()=> this.handleMouseLeave(order)}
                                                 return (
                                                     <div onClick={() => this.handleOnClick(order)}>
