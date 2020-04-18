@@ -32,7 +32,6 @@ export default class SignUpPage extends Component{
       super(props)
       this.state = { submit : false }
       this.handleClick = this.handleClick.bind(this);
- 
     }
     async handleClick(e){
       const user = ["julie", "julieshi@usc.edu", "password"];
