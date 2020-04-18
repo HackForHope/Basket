@@ -39,7 +39,7 @@ def initialize():
 
 #register a user
 def register(username, email, password):
-    sql = "INSERT INTO users (name, google_id) VALUES (%s, %s, %s);"
+    sql = "INSERT INTO users (name, email, password) VALUES (%s, %s, %s);"
     val = (username, email, password)
     mycursor.execute(sql,val)
 
