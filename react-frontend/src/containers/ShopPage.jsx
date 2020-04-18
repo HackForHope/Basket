@@ -28,6 +28,17 @@ export default class ShopPage extends Component {
                 <Nav />
                 <div className="myApp">
 
+<<<<<<< HEAD
+=======
+                    {/* <form className="shop-search-form">
+                        <input className="shop-search-bar" type="text" />
+                        <button className="shop-search-button" type="submit" >
+                            Search
+                        </button>
+                    </form> */}
+
+                    {/* <AddItem /> */}
+>>>>>>> ba595fc2218a8a356ac2ba5153143b04cb303994
                     <SearchButton />
                     <p>Search Result</p>
                     <SearchList className='multiBlock' />

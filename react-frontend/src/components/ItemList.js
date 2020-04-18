@@ -7,7 +7,7 @@ const ItemList = () => {
     return (
         <div className="multiBlock">
             {items.map(item => (
-                <Item name={item.name} price={item.price} key={item.id} />
+                <Item name={item.name} price={item.price} key={item.id}/>
             ))}
         </div>
     );

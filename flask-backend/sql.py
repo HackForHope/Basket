@@ -16,40 +16,41 @@ def initialize():
 
     mycursor.execute("USE basketdata")
 
-    # user table
+    # username, email, password, isActive: true/false
     mycursor.execute("CREATE TABLE users (userID int AUTO_INCREMENT PRIMARY KEY, name varchar(255) NOT NULL, email varchar(255) NOT NULL, password varchar(255) NOT NULL, live_address varchar(80), address varchar(80), lat FLOAT(6),lng FLOAT(6), isActiveHelper boolean);")
-    mycursor.execute("alter table users add unique (name)")
 
-    # market table
-    mycursor.execute("CREATE TABLE market(goodID int AUTO_INCREMENT PRIMARY KEY, name varchar(255) NOT NULL, price FLOAT(4),category varchar(255), supermarketID int(10));")
+    # market table: name, price, superMarketID, imgURL
+    mycursor.execute("CREATE TABLE market(goodID int AUTO_INCREMENT PRIMARY KEY, name varchar(255) NOT NULL, price FLOAT(4), supermarketID int(10), imgURL varchar(255));")
 
-    # cart table
+    # cart table: 
     mycursor.execute("CREATE TABLE cart(cartID int AUTO_INCREMENT PRIMARY KEY, orderID int(10), userID int(10), goodID int(10), num int(10), price FLOAT(2));")
     
-    #order table
-    mycursor.execute("CREATE TABLE order_list(orderID int AUTO_INCREMENT PRIMARY KEY, helperUserID int(10), requestedUserID int (10), cartID int(10), order_summary varchar(255), lat FLOAT(4), lng FLOAT(4), isTaken boolean, isFinished boolean);")
+    # order table: helperUserID requestedUserID order_title order_note  lat long    isTaken isFinished
+    mycursor.execute("CREATE TABLE order_list(orderID int AUTO_INCREMENT PRIMARY KEY, helperUserID int(10), requestedUserID int (10), order_title varchar(40), order_note varchar (40), lat FLOAT(4), lng FLOAT(4), isTaken boolean, isFinished boolean);")
 
-    #supermaket table
-    mycursor.execute("CREATE TABLE supermarket (supermarketID int AUTO_INCREMENT PRIMARY KEY, name varchar(255), address varchar(80), lat FLOAT(4) NOT NULL,lng FLOAT(4) NOT NULL);")
+    #supermarket table
+    mycursor.execute("CREATE TABLE supermarket(supermarketID int AUTO_INCREMENT PRIMARY KEY, name varchar(255), address varchar(80), lat FLOAT(4) NOT NULL,lng FLOAT(4) NOT NULL);")
 
+    #pair
+    mycursor.execute("create table userNameID (userID, name)")
 #register a user
-def register(username, email, password):
-    sql = "INSERT INTO users (name, email, password, isActiveFalse) VALUES (%s, %s, %s, False); "
-    val = (username, email, password)
+def register(username, email, password, isHelper=False):
+    sql = "INSERT INTO users (name, email, password, isActiveHelper) VALUES (%s, %s, %s, %s); "
+    val = (username, email, password, isHelper)
     mycursor.execute(sql,val)
     con.commit()
 
-#create a request
-def add_to_request(helperID,requestedUserID,status=False):
-    sql = "INSERT INTO request (helperUserID, requestedUserID, status) VALUES (%s,%s, %s);"
-    val = (helperID,requestedUserID,status)
+#register a user
+def register_full(username, email, password, lat, lng, isActiveHelper=False):
+    sql = "INSERT INTO users (name, email, password, lat, lng, isActiveHelper) VALUES (%s, %s, %s, %s, %s, %s); "
+    val = (username, email, password, lat, lng, isActiveHelper)
     mycursor.execute(sql,val)
     con.commit()
 
 #create a good
-def add_to_market(name,price,category,supermarketID):
-    sql = "INSERT INTO market(name,price,category,supermarketID) VALUES (%s,%s, %s,%s);"
-    val = (name,price,category,supermarketID)
+def add_to_market(name,price,supermarketID):
+    sql = "INSERT INTO market(name,price,supermarketID) VALUES (%s, %s,%s);"
+    val = (name,price,supermarketID)
     mycursor.execute(sql,val)
     con.commit()
 
@@ -60,16 +61,17 @@ def add_to_cart(goodID,userID, num,price):
     mycursor.execute(sql,val)
     con.commit()
 
-#create an order
-def add_to_order(userID, order_summary, lat,lng):
-    sql = "INSERT INTO order(userID,order_summary,lat,lng) VALUES (%s,%s, %s,%s);"
-    val = (userID,order_summary,lat,lng)
+#create an order helperUserID int(10), requestedUserID int (10), order_title varchar(40), order_note varchar (40), lat FLOAT(4), lng FLOAT(4), isTaken boolean, isFinished boolean);")
+def add_to_order(requestedUserID, order_title ,order_note, lat,lng):
+    sql = "INSERT INTO order_list(requestedUserID,order_title, order_note, lat, lng, isTaken, isFinished) VALUES (%s,%s, %s,%s, %s, False, False);"
+    val = (requestedUserID,order_title,order_note,lat,lng)
     mycursor.execute(sql,val)
     con.commit()
 
+
  #add a supermarket to the table of supermarket
 def add_supermarket(name,address,lat,lng):
-    sql = "INSERT INTO supermaket(goodID,userID,num,price) VALUES (%s,%s, %s,%s);"
+    sql = "INSERT INTO supermarket(name, address, lat, lng) VALUES (%s,%s, %s,%s);"
     val = (name,address,lat,lng)
     mycursor.execute(sql,val)
     con.commit()
@@ -92,7 +94,7 @@ def get_active_helper():
 
 
 #return a request by helper ID
-def get_request_by_helper(helperID):
+def get_request_by_helper (helperID):
     sql = "SELECT * FROM request WHERE helperUserID = %s;"
     mycursor.execute(sql%helperID)
     result = mycursor.fetchall()
@@ -123,6 +125,12 @@ def get_order_by_ID(orderID):
     con.commit()
     return result
 
+def get_all_market():
+    sql = "SELECT * FROM market"
+    mycursor.execute(sql)
+    result = mycursor.fetchall()
+    return 
+    
 def get_all_orders():
     sql = "SELECT * FROM order_list;"
     mycursor.execute(sql)
@@ -145,5 +153,4 @@ def delete(table_name):
 mycursor.execute("USE basketdata")
 con.commit()
 #register("jl", "mike@qq.com", "1234")
-print(get_order_by_user(1))
-get_active_request()
+# get_active_request()
