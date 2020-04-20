@@ -4,25 +4,25 @@ import RequestsPageEntry from '../components/RequestsPageEntry'
 
 const dummyData = [{
     id: 1,
-    timestamp: "hahahahahahahhaha",
+    timestamp: "2020-04-14",
     stage: 2,
     items: ['apple', 'banana', 'dried pepper', 'scallion', 'cheese balls'],
     helper: "xiaowang"
 }, {
     id: 2,
-    timestamp: "hahahahahahahhaha",
+    timestamp: "2020-04-15",
     stage: 0,
     items: ['apple', 'banana', 'dried pepper', 'scallion', 'cheese balls'],
     helper: "xiaowang"
 }, {
     id: 3,
-    timestamp: "hahahahahahahhaha",
+    timestamp: "2020-04-15",
     stage: 1,
     items: ['apple', 'banana', 'dried pepper', 'scallion', 'cheese balls'],
     helper: "xiaowang"
 }, {
     id: 4,
-    timestamp: "hahahahahahahhaha",
+    timestamp: "2020-04-15",
     stage: 2,
     items: ['apple', 'banana', 'dried pepper', 'scallion', 'cheese balls'],
     helper: "xiaowang"

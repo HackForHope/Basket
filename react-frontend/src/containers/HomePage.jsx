@@ -109,11 +109,11 @@ const helperData = [
         tag3: "34.03447, -118.28341!"
     }, {
         tag1: "Cici",
-        tag2: "Ciciiii",
+        tag2: "@Ciciiii",
         longitude: "34.01621, -118.28738!"
     }, {
         tag1: "Ricardo",
-        tag2: "Ricardo222",
+        tag2: "@Ricardo222",
         tag3: "34.0474, -118.299644"
     }
 ]

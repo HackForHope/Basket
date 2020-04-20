@@ -4,22 +4,22 @@ import MissionsPageEntry from '../components/MissionsPageEntry'
 
 const dummyData = [{
     id: 1,
-    timestamp: "hahahahahahahhaha",
+    timestamp: "2020-03-20",
     stage: 2,
     items: ['apple', 'banana', 'dried pepper', 'scallion', 'cheese balls']
 }, {
     id: 2,
-    timestamp: "hahahahahahahhaha",
+    timestamp: "2020-03-20",
     stage: 0,
     items: ['apple', 'banana', 'dried pepper', 'scallion', 'cheese balls']
 }, {
     id: 3,
-    timestamp: "hahahahahahahhaha",
+    timestamp: "2020-03-20",
     stage: 1,
     items: ['apple', 'banana', 'dried pepper', 'scallion', 'cheese balls']
 }, {
     id: 4,
-    timestamp: "hahahahahahahhaha",
+    timestamp: "2020-03-20",
     stage: 2,
     items: ['apple', 'banana', 'dried pepper', 'scallion', 'cheese balls']
 }]
