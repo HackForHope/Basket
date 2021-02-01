@@ -1,0 +1,98 @@
+No.,Name,Price$,SuperMaretId,ImgUrl
+1,Bacon: Boar's Head Extra Thick Cut,5,1,https://i.ibb.co/PDb5jcd/1.png
+2,Bagels: Dave's Killer Bread Plain Awesome,6,1,https://i.ibb.co/5KRCtss/2.png
+3,Healthy Cereal: Barbara's Peanut Butter Puffins,4,1,https://i.ibb.co/7nkdnwR/3.png
+4,Kid's Cereal: Kashi by Kids Berry Crumble,5,1,https://i.ibb.co/2yJQ20s/4.png
+5,Maple Syrup: Coombs Family Farms,25,1,https://i.ibb.co/tZLTN8k/5.png
+6,Oatmeal: Bob's Red Mill Quick Cooking Rolled Oats,6,1,https://i.ibb.co/wNGJdXG/6.png
+7,Pancake Mix: Birch Benders Classic Recipe,8,1,https://i.ibb.co/LJbs8Cn/7.png
+8,Waffles: Vans Original,4,1,https://i.ibb.co/pRHRKh3/8.png
+9,White Bread: Arnold Country White,4,1,https://i.ibb.co/b7KwM9T/9.png
+10,Whole Grain Bread: Dave's Killer 21 Whole Grains And Seeds,6,1,https://i.ibb.co/7bTGm8d/10.png
+11,Alfredo Sauce: Bertolli Organic Creamy Alfredo,2,1,https://i.ibb.co/BBJhX6t/11.png
+12,Marinara Sauce: Rao's Homemade,7,1,https://i.ibb.co/6wSvWVH/12.png
+13,Almond Butter: Once Again Creamy Roasted,21,1,https://i.ibb.co/mvxCkck/13.png
+14,Balsamic Vinegar: Pompeian Organic Balsamic Vinegar Of Modena,7,1,https://i.ibb.co/60yH1c5/14.png
+15,Barbecue Sauce: Sweet Baby Ray's Original,4,1,https://i.ibb.co/87PncSC/15.png
+16,Balsamic Dressing: Brianna's New American Creamy Balsamic Dressing,7,1,https://i.ibb.co/hmv3gd7/16.png
+17,Caesar Dressing: Cardini's Original,4,1,https://i.ibb.co/k5QtvW9/17.png
+18,Ranch Dressing: Trader Joe's Organic,11,1,https://i.ibb.co/gDzL6Kz/18.png
+19,Enchilada Sauce: Hatch Red Medium,2.5,1,https://i.ibb.co/Q9HX4Bc/19.png
+20,French Onion Dip: Lay's,3,1,https://i.ibb.co/Lzfndx6/20.png
+21,Honey: Mike's Hot Honey,9,1,https://i.ibb.co/1vDXBQ7/21.png
+22,Hot Sauce: Tapatío,9,1,https://i.ibb.co/gr8YFG5/22.png
+23,Relish: Woodstock Sweet Relish,4,1,https://i.ibb.co/XCbLcj5/23.png
+24,Mayonnaise: Sir Kensington's Classic,4,1,https://i.ibb.co/t3h1dmF/24.png
+25,Mustard: Edmond Fallot Moutarde De Dijon,6,1,https://i.ibb.co/VJM0fc3/25.png
+26,Olive Oil: California Olive Ranch Extra Virgin,5,2,https://i.ibb.co/QMNfKht/26.png
+27,Peanut Butter: Peanut Butter & Co. Smooth Operator,5,2,https://i.ibb.co/B3PbJkf/27.png
+28,Pesto: Giovanni Rana Basil Pesto,8,2,https://i.ibb.co/pz88sVd/28.png
+29,Pickles: Grillo's Pickles Italian Dill Spears,6,2,https://i.ibb.co/Y2JwwMg/29.png
+30,Salsa: Green Mountain Gringo Medium,12,2,https://i.ibb.co/rcZsHb9/30.png
+31,Butter: Kerrygold Salted,17,2,https://i.ibb.co/4Yx8sbK/31.png
+32,Cheddar Cheese: Tillamook Sharp,6,2,https://i.ibb.co/ScB03JQ/32.png
+33,Grated Parmesan Cheese: Mama Francesca Classic,12,2,https://i.ibb.co/LnVmc7x/33.png
+34,Mozzarella Cheese: BelGioioso Fresh Log,6,2,https://i.ibb.co/Vp9v2ZR/34.png
+35,Ricotta Cheese: Calabro Whole Milk,10,2,https://i.ibb.co/GvWGGPr/35.png
+36,Greek Yogurt: Fage Total 2%,1,2,https://i.ibb.co/jvfL4bC/36.png
+37,Yogurt: Siggi's Vanilla and Cinnamon 2%,2,2,https://i.ibb.co/d0hW2st/37.png
+38,Cauliflower Crust: Cali'Flour Foods The Original Italian,6,2,https://i.ibb.co/C9Tsh96/38.png
+39,Chicken Broth: Pacific Foods Low Sodium,3,2,https://i.ibb.co/9pX9VCt/39.png
+40,Chicken Noodle Soup: Annie's,3.5,2,https://i.ibb.co/vDY81xV/40.png
+41,Chili: Amy's Medium,3.5,2,https://i.ibb.co/6F5HK25/41.png
+42,Tomato Soup: Trader Joe's Organic Creamy,5,2,https://i.ibb.co/1drpvkQ/42.png
+43,Frozen Burgers: Pineland Farms Beef Patties,5,2,https://i.ibb.co/2ZZrmnf/43.png
+44,"Frozen Burrito: Amy's Cheddar Cheese, Bean, and Rice",3,2,https://i.ibb.co/8gqD9kQ/44.png
+45,Frozen Chicken Nuggets: Weaver Chicken Breast,5,2,https://i.ibb.co/d20khRt/45.png
+46,Frozen Dinner Rolls: Sister Schubert's Dinner Yeast Rolls,4.5,2,https://i.ibb.co/935BGzr/46.png
+47,Frozen French Fries: Alexia Organic Oven Crinkles,4,2,https://i.ibb.co/qRfBgNz/47.png
+48,Frozen Pizza: Amy's Margherita,5.5,2,https://i.ibb.co/ysmtrX6/48.png
+49,Frozen Taquitos: José Olé Chicken,6,2,https://i.ibb.co/c2LfcGF/49.png
+50,Hot Dogs: Sabrett Natural Casing Beef Frankfurters,5,3,https://i.ibb.co/0sDMR7R/50.png
+51,Sausage: Aidells Italian Style,5.5,3,https://i.ibb.co/t4JT1fD/51.png
+52,Gluten-Free Pasta: Banza,22.5,3,https://i.ibb.co/4KXMsvg/52.png
+53,Pasta: De Cecco,2.2,3,https://i.ibb.co/7Kk2T3V/53.png
+54,Macaroni and Cheese: Annie's Shells and White Cheddar,1.3,3,https://i.ibb.co/qsWN5Q5/54.png
+55,Ravioli: Celentano Cheese,3,3,https://i.ibb.co/30ZLDbR/55.png
+56,Tortellini: Rising Moon Four Cheese,5.5,3,https://i.ibb.co/j3V51Bf/56.png
+57,Taco Shells: Garden of Eatin' Blue Corn,3,3,https://i.ibb.co/ChK6dQY/57.png
+58,Tortillas: La Tortilla Factory,2,3,https://i.ibb.co/TW1SbFH/58.png
+59,Veggie Burgers: Morningstar Farms Garden Veggie,6,3,https://i.ibb.co/Vmmnv2k/59.png
+60,Almond Milk: Califia Farms Unsweetened,4,3,https://i.ibb.co/wY0Ww47/60.png
+61,Apple Juice: Martinelli's 100% Pure,5,3,https://i.ibb.co/6H58J74/61.png
+62,Bloody Mary Mix: McClure's,19,3,https://i.ibb.co/6RFfHnt/62.png
+63,Margarita Mix: Williams Sonoma,17,3,https://i.ibb.co/zsf8jrk/63.png
+64,Seltzer: Topo Chico,17,3,https://i.ibb.co/10SzJ2H/64.png
+65,Coconut Water: Harmless Harvest,9,3,https://i.ibb.co/hDQmF9R/65.png
+66,Coffee: Stumptown Original Cold Brew,19,3,https://i.ibb.co/9WS4dFG/66.png
+67,Lemonade: Newman's Own,4,3,https://i.ibb.co/4tM5mXr/67.png
+68,Orange Juice: Natalie's,12,3,https://i.ibb.co/F0kSrSr/68.png
+69,Barbecue Potato Chips: Deep River Mesquite BBQ,1,3,https://i.ibb.co/zPfsXw9/69.png
+70,Graham Crackers: Honey Maid,3,3,https://i.ibb.co/H2HLjFL/70.png
+71,Sour Cream and Onion Potato Chips: Dirty,1,3,https://i.ibb.co/W0TVBCv/71.png
+72,Cheese Crackers: Cheez-It Original,2,3,https://i.ibb.co/NnDyLvF/72.png
+73,Potato Chips: Cape Cod Original,4,3,https://i.ibb.co/5M9dwyQ/73.png
+74,Protein Bar: Perfect Bar Dark Chocolate Chip Peanut Butter,3,3,https://i.ibb.co/ygp3JK3/74.png
+75,Granola: Purely Elizabeth Pumpkin Cinnamon,7,4,https://i.ibb.co/9YjZmKS/75.png
+76,Pita Chips: Stacy's Simply Naked,3.5,4,https://i.ibb.co/Y8FgSZs/76.png
+77,Crackers: 34 Degrees Toasted Onion,4.5,4,https://i.ibb.co/wckXdyL/77.png
+78,Popcorn: Pop Secret Butter,4,4,https://i.ibb.co/drFdsgc/78.png
+79,Pretzels: Snack Factory Pretzel Crisps Original,4,4,https://i.ibb.co/Lvqq5hW/79.png
+80,Tortilla Chips: Xochitl Corn Chips,4,4,https://i.ibb.co/3dCwB8z/80.png
+81,Brownie Mix: Duncan Hines Dark Chocolate Fudge,2,4,https://i.ibb.co/BgbXr87/81.png
+82,Chocolate Chips: Guittard Semisweet,3,4,https://i.ibb.co/ZcFXGkj/82.png
+83,Caramel Sauce: King's Cupboard Cream Caramel Sauce,12,4,https://i.ibb.co/rc83c1c/83.png
+84,Chocolate Sauce: Coop's Hot Fudge,8,4,https://i.ibb.co/LNPMK0Q/84.png
+85,Chocolate Ice Cream: Three Twins Bittersweet Chocolate,10,4,https://i.ibb.co/23Q9R1v/85.png
+86,Mint Ice Cream: Talenti Mediterranean Mint,3,4,https://i.ibb.co/c1dYLXm/86.png
+87,Vanilla Ice Cream: Ben & Jerry's,3,4,https://i.ibb.co/y8WVtqT/87.png
+88,Ice Cream Cones: Edward And Sons Let's Do Organic Cake Style,3,4,https://i.ibb.co/gjz03t3/88.png
+89,Cinnamon Roll Dough: Immaculate,5,4,https://i.ibb.co/ZgLgXSz/89.png
+90,Sugar Cookie Dough: 365 Everyday Value,2,4,https://i.ibb.co/Gdr5q09/90.png
+91,Chocolate Cake Mix: Miss Jones Baking Co.,6,4,https://i.ibb.co/TMgztWx/91.png
+92,Vanilla Cake Mix: Miss Jones Baking Co.,6,4,https://i.ibb.co/4fgzRtn/92.png
+93,Birthday Cake Mix: Betty Crocker Super Moist Party Rainbow Chip,1.5,4,https://i.ibb.co/pLS3fxw/93.png
+94,Chocolate Frosting: Duncan Hines Creamy Classic Chocolate,1.5,4,https://i.ibb.co/qxKJB4c/94.png
+95,Vanilla Frosting: Betty Crocker Rich and Creamy,1.5,4,https://i.ibb.co/pz901z8/95.png
+96,Cookie Dough: Joel's Outrageous Chocolate Chunk,17,4,https://i.ibb.co/WyJ4ssD/96.png
+97,Chocolate Chip Cookies: Tate's Original,6,4,https://i.ibb.co/mvgzZQn/97.png

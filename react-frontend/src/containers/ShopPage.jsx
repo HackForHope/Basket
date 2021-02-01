@@ -33,7 +33,7 @@ export default class ShopPage extends Component {
                         <button className="shop-search-button" type="submit" >
                             Search
                         </button>
-                    </form> */}
+                 add **   </form> */}
 
                     {/* <AddItem /> */}
                     <SearchButton />
